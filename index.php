@@ -270,7 +270,7 @@ function addRow($row) {
   }
   echo "<div class='left'><input type='button' value=\"".ucfmsg("SEND_EMAIL")."\" onclick=\"MailSelection()\" /></div>";
   if(! $read_only) {
-    echo "<div class='left'><input type='button' value=\"".ucfmsg("DELETE")."\"     onclick=\"DeleteSel()\" /></div>";
+    echo "<div class='left'><input type='button' name='delete' value=\"".ucfmsg("DELETE")."\"     onclick=\"DeleteSel()\" /></div>";
     
 	  if(isset($table_groups) and $table_groups != "" and !$is_fix_group)
 	  {

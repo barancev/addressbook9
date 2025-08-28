@@ -395,7 +395,7 @@ $myrow = mysqli_fetch_array($result);
   </form>
   <form method="get" action="delete<?php echo $page_ext; ?>">
     <input type="hidden" name="id" value="<?php echo $myrow['id']?>" />
-    <input type="submit" name="update" value="<?php echo ucfmsg('DELETE') ?>" />
+    <input type="submit" name="delete" value="<?php echo ucfmsg('DELETE') ?>" />
   </form>
 <?php
   } else
