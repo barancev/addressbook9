@@ -259,7 +259,7 @@ if(isset($domain) && isset($domain[$domain_id]) && isset($domain[$domain_id]['sk
 }
 if(!isset($group_name)) {
   $group_name = null;
-  if (isset($group)) {
+  if (isset($group) && $group != "") {
     if ($group == "[none]") {
       $group_name = $group;
     } else {
@@ -389,9 +389,9 @@ if(isset($part)) {
   	  $part_ids[] = $one_part;
     }
   }
-  $part_sql = "(".$table.".id = '".implode("' OR id = '",  $part_ids)."')";
+  $part_sql = "(id = '".implode("' OR id = '",  $part_ids)."')";
 } else if(isset($id)) {
-  $part_sql = $table.".id = '$id'";
+  $part_sql = "id = '$id'";
 }
 
 include("address.class.php");

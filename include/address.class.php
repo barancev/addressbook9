@@ -49,8 +49,8 @@ function deleteAddresses($part_sql) {
   	          WHERE deprecated is null AND ".$part_sql." AND domain_id = ".$domain_id;
   	  mysqli_query($db, $sql);
   	} else {
-  	  $sql = "DELETE FROM $table_grp_adr WHERE ".$part_sql." AND domain_id = ".$domain_id;
-  	  mysqli_query($db, $sql);
+  	  // $sql = "DELETE FROM $table_grp_adr WHERE ".$part_sql." AND domain_id = ".$domain_id;
+  	  // $result = mysqli_query($db, $sql);
   	  $sql = "DELETE FROM $table         WHERE ".$part_sql." AND domain_id = ".$domain_id;
   	  mysqli_query($db, $sql);
     }
